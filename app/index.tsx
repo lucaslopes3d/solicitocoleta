@@ -1,15 +1,12 @@
-import { Text, View } from "react-native";
+import * as S from "./styles";
+import { FormComponent } from "../components/FormComponent/formComponent";
+import { LogoComponent } from "@/components/LogoComponet/LogoComponent";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Marcus balde</Text>
-    </View>
+    <S.Visualization>
+      <LogoComponent />
+      <FormComponent />
+    </S.Visualization>
   );
 }
