@@ -101,7 +101,10 @@ export const FormComponent: React.FC = () => {
         multiline
         numberOfLines={10}
       />
-      <ButtonComponent title="enviar" onPush={() => handleSubmitCompleteForm} />
+      <ButtonComponent
+        title="enviar"
+        onPush={() => handleAfterClickSendButtonCleanForm}
+      />
     </S.StyledView>
   );
 };
