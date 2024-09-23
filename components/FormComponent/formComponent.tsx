@@ -39,50 +39,6 @@ export const FormComponent: React.FC = () => {
       enderecoCompleto: enedereco,
       solicitacaoCompleta: solicitacao,
     };
-
-    //   const mysql = require("mysql2");
-
-    //   const connection = mysql.createConnection({
-    //     host: "149.62.37.1",
-    //     user: "u201631368_lucas",
-    //     password: "3ntr0niC#1529",
-    //     database: "u201631368_solicitocoleta",
-    //   });
-
-    //   const clientData = {
-    //     nome: completeForm.nomeCompleto,
-    //     cpf: completeForm.cpfCompleto,
-    //     telefone: completeForm.telefoneCompleto,
-    //     endereco: completeForm.enderecoCompleto,
-    //     solicitacao: completeForm.solicitacaoCompleta,
-    //   };
-
-    //   const sql =
-    //     "INSERT INTO solicitocoleta (nome, cpf, telefone, endereco, solicitacao) VALUES (?, ?, ?, ?, ?)";
-
-    //   connection.query(
-    //     sql,
-    //     [
-    //       clientData.nome,
-    //       clientData.cpf,
-    //       clientData.telefone,
-    //       clientData.endereco,
-    //       clientData.solicitacao,
-    //     ],
-
-    //     (err: any, result: any) => {
-    //       if (err) {
-    //         console.error("Erro ao inserir dados:", err);
-    //       } else {
-    //         handleAfterClickSendButtonCleanForm();
-    //         console.log(
-    //           "Dados inseridos com sucesso! ID do novo registro:",
-    //           result.insertId
-    //         );
-    //       }
-    //       connection.end();
-    //     }
-    //   );
   };
 
   return (
@@ -100,6 +56,7 @@ export const FormComponent: React.FC = () => {
         onChange={() => handleSetSolicitacao}
         multiline
         numberOfLines={10}
+        textAlignVertical="top"
       />
       <ButtonComponent
         title="enviar"
