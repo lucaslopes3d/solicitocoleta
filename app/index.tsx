@@ -1,6 +1,6 @@
 import * as S from "./styles";
-import { FormComponent } from "../components/FormComponent/formComponent";
-import { LogoComponent } from "@/components/LogoComponet/LogoComponent";
+import { FormComponent } from "../screens";
+import { LogoComponent } from "@/components/logoComponet";
 
 export default function Index() {
   return (
