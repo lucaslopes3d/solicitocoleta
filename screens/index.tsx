@@ -3,6 +3,8 @@ import * as S from "./styles";
 import { ButtonComponent } from "../components/buttonComponent";
 import { TextInputTypes } from "./types";
 import { TextInputComponent } from "@/components/textInputComponent";
+import { TextAreaInputComponent } from "@/components/textAreaInputComponent";
+import { NumericInputComponent } from "@/components/numericInputComponent";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
@@ -46,12 +48,12 @@ export const FormComponent: React.FC = () => {
         value={nome}
         onChangeText={handleSetNome}
       />
-      <TextInputComponent
+      <NumericInputComponent
         title="CPF:"
         value={cpf}
         onChangeText={handleSetCpf}
       />
-      <TextInputComponent
+      <NumericInputComponent
         title="Telefone:"
         value={telefone}
         onChangeText={handleSetTelefone}
@@ -61,10 +63,11 @@ export const FormComponent: React.FC = () => {
         value={enedereco}
         onChangeText={handleSetEndereco}
       />
-      <TextInputComponent
+      <TextAreaInputComponent
         title="Solicitação:"
         value={solicitacao}
         onChangeText={handleSetSolicitacao}
+        numberOfLines={10}
       />
 
       <ButtonComponent title="enviar" onPush={handleSubmitCompleteForm} />
