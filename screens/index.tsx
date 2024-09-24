@@ -2,9 +2,10 @@ import React, { ReactElement, useState } from "react";
 import * as S from "./styles";
 import { ButtonComponent } from "../components/buttonComponent";
 import { TextInputTypes } from "./types";
-import { TextInputComponent } from "@/components/textInputComponent";
-import { TextAreaInputComponent } from "@/components/textAreaInputComponent";
-import { NumericInputComponent } from "@/components/numericInputComponent";
+import { TextInputComponent } from "../components/textInputComponent";
+import { TextAreaInputComponent } from "../components/textAreaInputComponent";
+import { NumericInputComponent } from "../components/numericInputComponent";
+import { LogoComponent } from "../components/logoComponet";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
@@ -42,35 +43,38 @@ export const FormComponent: React.FC = () => {
   };
 
   return (
-    <S.StyledView>
-      <TextInputComponent
-        title="Nome completo:"
-        value={nome}
-        onChangeText={handleSetNome}
-      />
-      <NumericInputComponent
-        title="CPF:"
-        value={cpf}
-        onChangeText={handleSetCpf}
-      />
-      <NumericInputComponent
-        title="Telefone:"
-        value={telefone}
-        onChangeText={handleSetTelefone}
-      />
-      <TextInputComponent
-        title="Endereço da coleta:"
-        value={enedereco}
-        onChangeText={handleSetEndereco}
-      />
-      <TextAreaInputComponent
-        title="Solicitação:"
-        value={solicitacao}
-        onChangeText={handleSetSolicitacao}
-        numberOfLines={10}
-      />
+    <>
+      <LogoComponent />
+      <S.StyledView>
+        <TextInputComponent
+          title="Nome completo:"
+          value={nome}
+          onChangeText={handleSetNome}
+        />
+        <NumericInputComponent
+          title="CPF:"
+          value={cpf}
+          onChangeText={handleSetCpf}
+        />
+        <NumericInputComponent
+          title="Telefone:"
+          value={telefone}
+          onChangeText={handleSetTelefone}
+        />
+        <TextInputComponent
+          title="Endereço da coleta:"
+          value={enedereco}
+          onChangeText={handleSetEndereco}
+        />
+        <TextAreaInputComponent
+          title="Solicitação:"
+          value={solicitacao}
+          onChangeText={handleSetSolicitacao}
+          numberOfLines={10}
+        />
 
-      <ButtonComponent title="enviar" onPush={handleSubmitCompleteForm} />
-    </S.StyledView>
+        <ButtonComponent title="enviar" onPush={handleSubmitCompleteForm} />
+      </S.StyledView>
+    </>
   );
 };
