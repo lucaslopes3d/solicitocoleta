@@ -6,25 +6,26 @@ import { TextInputComponent } from "../components/textInputComponent";
 import { TextAreaInputComponent } from "../components/textAreaInputComponent";
 import { NumericInputComponent } from "../components/numericInputComponent";
 import { LogoComponent } from "../components/logoComponet";
+import { Text } from "react-native";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [telefone, setTelefone] = useState("");
+  const [cpf, setCpf] = useState<number | null>(null);
+  const [telefone, setTelefone] = useState<number | null>(null);
   const [enedereco, setEndereco] = useState("");
   const [solicitacao, setSolicitacao] = useState("");
 
-  const handleSetNome = (text: any) => setNome(text);
-  const handleSetCpf = (text: any) => setCpf(text);
-  const handleSetTelefone = (text: any) => setTelefone(text);
-  const handleSetEndereco = (text: any) => setEndereco(text);
-  const handleSetSolicitacao = (text: any) => setSolicitacao(text);
+  const handleSetNome = (text: string) => setNome(text);
+  const handleSetCpf = (text: number) => setCpf(text);
+  const handleSetTelefone = (text: number) => setTelefone(text);
+  const handleSetEndereco = (text: string) => setEndereco(text);
+  const handleSetSolicitacao = (text: string) => setSolicitacao(text);
 
   //Limpar os campos digitados
   const handleAfterClickSendButtonCleanForm = () => {
     setNome("");
-    setCpf("");
-    setTelefone("");
+    setCpf(null);
+    setTelefone(null);
     setEndereco("");
     setSolicitacao("");
   };
@@ -73,7 +74,7 @@ export const FormComponent: React.FC = () => {
           numberOfLines={10}
         />
 
-        <ButtonComponent title="enviar" onPush={handleSubmitCompleteForm} />
+        <ButtonComponent onPress={handleSubmitCompleteForm} text={"ENVIAR"} />
       </S.StyledView>
     </>
   );

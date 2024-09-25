@@ -1,4 +1,5 @@
 export interface ButtonProps {
-  title: string;
-  onPush: () => void;
+  title?: string;
+  onPress: (() => void) | null | undefined;
+  text: string | number;
 }
