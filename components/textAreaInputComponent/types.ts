@@ -1,6 +1,6 @@
 export interface InputTypes {
   title: string;
-  onChangeText: Function;
+  onChangeText: (text: string) => void;
   value: string;
   numberOfLines?: number;
 }
