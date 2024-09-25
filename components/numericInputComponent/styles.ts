@@ -19,5 +19,4 @@ export const StyledTexts = styled.Text`
   font-weight: bold;
   font-size: 14px;
   margin-top: 8px;
-  text-align: start;
 `;

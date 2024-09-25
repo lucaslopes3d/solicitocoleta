@@ -10,22 +10,22 @@ import { Text } from "react-native";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
-  const [cpf, setCpf] = useState<number | null>(null);
-  const [telefone, setTelefone] = useState<number | null>(null);
+  const [cpf, setCpf] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [enedereco, setEndereco] = useState("");
   const [solicitacao, setSolicitacao] = useState("");
 
   const handleSetNome = (text: string) => setNome(text);
-  const handleSetCpf = (text: number) => setCpf(text);
-  const handleSetTelefone = (text: number) => setTelefone(text);
+  const handleSetCpf = (text: string) => setCpf(text);
+  const handleSetTelefone = (text: string) => setTelefone(text);
   const handleSetEndereco = (text: string) => setEndereco(text);
   const handleSetSolicitacao = (text: string) => setSolicitacao(text);
 
   //Limpar os campos digitados
   const handleAfterClickSendButtonCleanForm = () => {
     setNome("");
-    setCpf(null);
-    setTelefone(null);
+    setCpf("");
+    setTelefone("");
     setEndereco("");
     setSolicitacao("");
   };

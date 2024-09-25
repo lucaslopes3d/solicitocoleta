@@ -1,7 +1,7 @@
 export interface TextInputTypes {
   nomeCompleto: string;
-  cpfCompleto: number | null;
-  telefoneCompleto: number | null;
+  cpfCompleto: string | number;
+  telefoneCompleto: string | number;
   enderecoCompleto: string;
   solicitacaoCompleta: string;
 }
