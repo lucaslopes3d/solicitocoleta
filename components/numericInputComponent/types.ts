@@ -1,5 +1,5 @@
 export interface InputTypes {
   title: string;
-  onChangeText: () => void;
+  onChangeText: (text: string) => void;
   value: string;
 }
