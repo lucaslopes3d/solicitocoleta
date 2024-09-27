@@ -1,6 +1,6 @@
-export interface InputTypes {
+export interface AreaInputTypes {
   title: string;
-  onChangeText: (text: string) => void;
+  onChangeText: Function;
   value: string;
   numberOfLines?: number;
 }

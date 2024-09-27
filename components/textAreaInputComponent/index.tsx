@@ -1,7 +1,7 @@
 import * as S from "./styles";
-import { InputTypes } from "./types";
+import { AreaInputTypes } from "./types";
 
-export const TextAreaInputComponent: React.FC<InputTypes> = (props) => {
+export const TextAreaInputComponent: React.FC<AreaInputTypes> = (props) => {
   return (
     <S.StyledView>
       <S.StyledTexts>{props.title}</S.StyledTexts>

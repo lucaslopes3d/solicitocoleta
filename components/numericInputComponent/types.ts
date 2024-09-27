@@ -1,5 +1,5 @@
-export interface InputTypes {
+export interface NumericInputTypes {
   title: string;
-  onChangeText: (text: string) => void;
+  onChangeText: Function;
   value: string;
 }

@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 import { ButtonComponent } from "../components/buttonComponent";
 import { TextInputTypes } from "./types";
@@ -6,7 +6,6 @@ import { TextInputComponent } from "../components/textInputComponent";
 import { TextAreaInputComponent } from "../components/textAreaInputComponent";
 import { NumericInputComponent } from "../components/numericInputComponent";
 import { LogoComponent } from "../components/logoComponet";
-import { Text } from "react-native";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
