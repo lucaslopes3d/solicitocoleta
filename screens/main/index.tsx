@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import { ButtonComponent } from "../../components/buttonComponent";
+import { ButtonComponent } from "../../components/ButtonComponent";
 import { TextInputTypes } from "./types";
 import { TextInputComponent } from "../../components/textInputComponent";
 import { TextAreaInputComponent } from "../../components/textAreaInputComponent";
 import { NumericInputComponent } from "../../components/numericInputComponent";
-import { LogoComponent } from "../../components/logoComponet";
+import { LogoComponent } from "../../components/LogoComponet";
+import collect from "@/api/routes/collect";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
@@ -30,16 +31,15 @@ export const FormComponent: React.FC = () => {
   };
 
   const handleSubmitCompleteForm = () => {
-    const completeForm: TextInputTypes = {
-      nomeCompleto: nome,
-      cpfCompleto: cpf,
-      telefoneCompleto: telefone,
-      enderecoCompleto: enedereco,
-      solicitacaoCompleta: solicitacao,
-    };
-
-    console.log(completeForm);
-
+    collect
+      .post({
+        cpf: cpf,
+        endereco: enedereco,
+        nome: nome,
+        solicitacao: solicitacao,
+        telefone: telefone,
+      })
+      .then(() => alert("Dados inseridos"));
     handleAfterClickSendButtonCleanForm();
   };
 
