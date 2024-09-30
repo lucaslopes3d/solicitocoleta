@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./styles";
-import { ButtonComponent } from "../components/buttonComponent";
+import { ButtonComponent } from "../../components/buttonComponent";
 import { TextInputTypes } from "./types";
-import { TextInputComponent } from "../components/textInputComponent";
-import { TextAreaInputComponent } from "../components/textAreaInputComponent";
-import { NumericInputComponent } from "../components/numericInputComponent";
-import { LogoComponent } from "../components/logoComponet";
+import { TextInputComponent } from "../../components/textInputComponent";
+import { TextAreaInputComponent } from "../../components/textAreaInputComponent";
+import { NumericInputComponent } from "../../components/numericInputComponent";
+import { LogoComponent } from "../../components/logoComponet";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
@@ -37,6 +37,7 @@ export const FormComponent: React.FC = () => {
       enderecoCompleto: enedereco,
       solicitacaoCompleta: solicitacao,
     };
+
     console.log(completeForm);
 
     handleAfterClickSendButtonCleanForm();

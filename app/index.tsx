@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import { FormComponent } from "../screens";
+import { FormComponent } from "../screens/main";
 
 export default function Index() {
   return (
