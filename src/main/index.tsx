@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
-import { ButtonComponent } from "../../components/ButtonComponent";
-import { TextInputTypes } from "./types";
-import { LogoComponent } from "../../components/LogoComponet";
-import collect from "@/api/routes/collect";
-import { TextInputComponent } from "@/components/textInputComponent";
-import { NumericInputComponent } from "@/components/numericInputComponent";
-import { TextAreaInputComponent } from "@/components/textAreaInputComponent";
+import { LogoComponent } from "../components/LogoComponet";
+import { TextInputComponent } from "../components/textInputComponent";
+import { NumericInputComponent } from "../components/numericInputComponent";
+import { TextAreaInputComponent } from "../components/textAreaInputComponent";
+import { ButtonComponent } from "../components/ButtonComponent";
+import collect from "../api/routes/collect";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
