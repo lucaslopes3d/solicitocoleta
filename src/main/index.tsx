@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import { ButtonComponent } from "../../components/ButtonComponent";
 import { TextInputTypes } from "./types";
-import { TextInputComponent } from "../../components/TextInputComponent";
-import { TextAreaInputComponent } from "../../components/TextAreaInputComponent";
-import { NumericInputComponent } from "../../components/NumericInputComponent";
 import { LogoComponent } from "../../components/LogoComponet";
 import collect from "@/api/routes/collect";
+import { TextInputComponent } from "@/components/textInputComponent";
+import { NumericInputComponent } from "@/components/numericInputComponent";
+import { TextAreaInputComponent } from "@/components/textAreaInputComponent";
 
 export const FormComponent: React.FC = () => {
   const [nome, setNome] = useState("");
